@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!--加载外部js文件-->
+    <script src="demo.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h3>弹出框</h3>
+        <p>我们可以用 alert(‘你好，这是一个弹框！’); 方法来弹出需要输出的内容。</p>
+        <!--按钮触发动作-->
+        <button onclick="myFunction_1()">按钮</button>
+    </div>
+    <div class="content">
+        <h3>修改内容</h3>
+        <p>document.getElementById(' id ').innerHTML=' 你好，我在这里输出了一段文字！’; 获取ID之后注入、修改了它的内容。</p>
+        <p id="demo">这是一段文字将在你按下按钮后被修改。</p>
+        <button onclick="myFunction_2()">按钮</button>
+    </div>
+    <div class="content">
+        <h3>直接输出内容</h3>
+        <p>document.write('你好，我在这里输出了一段文字！'); 在HTML中直接输出引号中的文字。</p>
+        <script>
+            //直接输出内容。
+            document.write('你好，我在这里输出了一段文字！');
+
+        </script>
+    </div>
+</body>
+
+</html>
