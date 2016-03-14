@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <!--加载外部js文件-->
+    <script src="demo.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h3>if语句</h3>
+        <p>好像休息啊，今天是星期几来着？</p>
+        <!--按钮触发动作-->
+        <button onclick="myFunction()">按钮</button>
+        <p id="demo"></p>
+    </div>
+    <div class="content">
+        <h3>switch语句</h3>
+        <p>好像休息啊，今天是星期几来着？</p>
+        <!--按钮触发动作-->
+        <button onclick="myFunction_2()">按钮</button>
+        <p id="demo_2"></p>
+    </div>
+    <div class="content">
+        <h3>for语句</h3>
+        <p>先把1～5之间的数字给我罗列出来～</p>
+        <!--按钮触发动作-->
+        <button onclick="myFunction_3()">按钮</button>
+        <p id="demo_3"></p>
+    </div>
+    <div class="content">
+        <p>用 return 返回函数，并输出</p>
+        <p id="demo_4"></p>
+        <script>
+            //由于直接输出而没有用触发器，脚本必须在ID后面，否则脚本没有读到ID所在位置，就无法把内容传递到ID中
+            function myFunction_4() {
+                var cars = ['宝马', '保时捷', '别克', '大众'],
+                    i = 0,
+                    l = cars.length,
+                    y = '';
+                //for的几个参数可以不放在里面，第一个初始值可以在外面定义变量，第二个范围可以在循环内并加上break跳出循环，第三个循环体液可以放在循环内
+                for (;;) {
+                    y = y + '汽车的品类有' + cars[i] + '<br>';
+                    i++;
+                    if (i == l) break;
+                }
+                //return 用于把值返回给函数，使得函数成为一个值，这样可以在后面直接调用函数来获得这个值
+                return y;
+            }
+            //直接输出函数来传递这个值
+            document.getElementById('demo_4').innerHTML = myFunction_4();
+
+        </script>
+    </div>
+    <div class="content">
+        <h3>for/in语句</h3>
+        <p>用于循环遍历对象值（把对象的值全部查询一遍。）</p>
+        <button onclick="myFunction_5()">按钮</button>
+        <p id="demo_5">这里会是什么呢？</p>
+    </div>
+    <div class="content">
+        <h3>while语句</h3>
+        <button onclick="myFunction_6()">按钮</button>
+        <p id="demo_6"></p>
+    </div>
+    <div class="content">
+        <h3>do/while语句</h3>
+        <button onclick='myFunction_7()'>按钮</button>
+        <p id="demo_7"></p>
+    </div>
+    <div class="content">
+        <h3>continue语句</h3>
+        <p>跳过指定的条件的语句</p>
+        <button onclick="myFunction_8()">按钮</button>
+        <p id="demo_8"></p>
+    </div>
+</body>
+
+</html>
