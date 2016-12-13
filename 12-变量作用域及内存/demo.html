@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //函数只按值传递，所以 p 往函数传递的位置在 obj，跟函数内的 p 不产生任何关系。
+        function box(obj) {
+            obj.name = 'lee';
+            var p = new Object;
+            p.name = 'kkk';
+        }
+        var p = new Object;
+        box(p);
+        alert(p.name);
+    </script>
+</body>
+
+</html>
